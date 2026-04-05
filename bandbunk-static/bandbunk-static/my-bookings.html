@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookings — BandBunk</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+<div class="container section--sm">
+  <h1 class="mb-4">My Bookings</h1>
+  <div class="dashboard-tabs">
+    <a href="#as-artist" class="dashboard-tab active" onclick="switchTab(this,'as-artist'); return false;">As Artist</a>
+    <a href="#as-host" class="dashboard-tab" onclick="switchTab(this,'as-host'); return false;">As Host</a>
+  </div>
+
+  <div id="as-artist" class="tab-panel">
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+
+      <div class="card p-4">
+        <div class="flex-between mb-2" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h5 class="mb-0">Spare room near O2 Academy</h5>
+            <p class="text-muted" style="font-size:0.85rem;">Leeds · 14 Apr 2026 → 15 Apr 2026 (1 night)</p>
+          </div>
+          <span class="badge badge--green">Confirmed ✓</span>
+        </div>
+        <div class="flex-gap" style="flex-wrap:wrap; font-size:0.85rem; color:var(--grey-2); margin-bottom:1rem;">
+          <span>🎸 Stone Dead</span>
+          <span>📍 O2 Academy Leeds</span>
+          <span>🗓️ Gig: 14 Apr 2026</span>
+          <span style="color:var(--purple-bright);">£15</span>
+        </div>
+        <div style="background:var(--dark-2); border:1px solid var(--dark-4); border-radius:var(--radius-sm); padding:0.75rem 1rem; margin-bottom:1rem; font-size:0.85rem;">
+          <strong>Address:</strong> 12 Merrion Street, Leeds, LS1 6PD
+        </div>
+        <div class="flex-gap" style="flex-wrap:wrap;">
+          <a href="#" class="btn btn--ghost btn--sm">View details</a>
+          <a href="#" class="btn btn--danger btn--sm">Cancel</a>
+        </div>
+      </div>
+
+      <div class="card p-4">
+        <div class="flex-between mb-2" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h5 class="mb-0">Floor space, Shoreditch flat</h5>
+            <p class="text-muted" style="font-size:0.85rem;">London · 22 Mar 2026 → 23 Mar 2026 (1 night)</p>
+          </div>
+          <span class="badge badge--purple">Completed</span>
+        </div>
+        <div class="flex-gap" style="flex-wrap:wrap; font-size:0.85rem; color:var(--grey-2); margin-bottom:1rem;">
+          <span>🎸 Stone Dead</span>
+          <span>📍 Moth Club, London</span>
+          <span>🗓️ Gig: 22 Mar 2026</span>
+          <span style="color:var(--purple-bright);">£10</span>
+        </div>
+        <div class="flex-gap">
+          <a href="#" class="btn btn--ghost btn--sm">View details</a>
+          <a href="leave-review.html" class="btn btn--outline btn--sm">★ Review host</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="as-host" class="tab-panel" style="display:none;">
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <div class="card p-4">
+        <div class="flex-between mb-2" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h5 class="mb-0">Riot Siren</h5>
+            <p class="text-muted" style="font-size:0.85rem;">Comfy sofa in Digbeth · 18 Apr 2026 → 19 Apr 2026</p>
+          </div>
+          <span class="badge badge--amber">Awaiting your response</span>
+        </div>
+        <div class="flex-gap" style="flex-wrap:wrap; font-size:0.85rem; color:var(--grey-2); margin-bottom:0.75rem;">
+          <span>👤 riotsiren</span>
+          <span>📍 Playing at: The Flapper, Birmingham</span>
+          <span>🗓️ Gig: 18 Apr 2026</span>
+          <a href="#" style="color:var(--purple-glow);">🔗 Verify gig</a>
+          <span style="color:var(--purple-bright);">£10</span>
+        </div>
+        <div class="form-group">
+          <label>Optional message to artist</label>
+          <textarea rows="2" placeholder="Welcome message, parking info, anything useful..."></textarea>
+        </div>
+        <div class="flex-gap">
+          <button class="btn btn--success">✓ Confirm booking</button>
+          <button class="btn btn--danger">✗ Decline</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+<script>
+function switchTab(el, panelId) {
+  document.querySelectorAll('.dashboard-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+  el.classList.add('active');
+  document.getElementById(panelId).style.display = 'block';
+}
+</script>
+</body>
+</html>

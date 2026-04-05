@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join BandBunk — BandBunk</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+<div class="container section--sm">
+  <div class="container--narrow" style="margin:0 auto;">
+    <div class="text-center mb-4">
+      <h1 class="mb-2">Join BandBunk</h1>
+      <p class="text-muted">Fans with sofas. Bands that need them. £10 a night.</p>
+    </div>
+    <div class="card p-4">
+      <div class="form-group mb-4">
+        <label>I am joining as...</label>
+        <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:0.5rem;">
+          <label class="form-check" style="background:var(--dark-2); border:1px solid var(--dark-4); border-radius:var(--radius-md); padding:1rem; cursor:pointer; transition:border-color 0.2s;" id="card-artist">
+            <input type="radio" name="user_type" value="artist" onchange="highlightCard(this)">
+            <div><strong style="color:var(--white); font-size:0.95rem;">Artist / Band</strong></div>
+          </label>
+          <label class="form-check" style="background:var(--dark-2); border:1px solid var(--dark-4); border-radius:var(--radius-md); padding:1rem; cursor:pointer; transition:border-color 0.2s;" id="card-host">
+            <input type="radio" name="user_type" value="host" onchange="highlightCard(this)">
+            <div><strong style="color:var(--white); font-size:0.95rem;">Fan / Host</strong></div>
+          </label>
+          <label class="form-check" style="background:var(--dark-2); border:1px solid var(--dark-4); border-radius:var(--radius-md); padding:1rem; cursor:pointer; transition:border-color 0.2s;" id="card-both">
+            <input type="radio" name="user_type" value="both" onchange="highlightCard(this)">
+            <div><strong style="color:var(--white); font-size:0.95rem;">Both</strong></div>
+          </label>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" name="first_name" placeholder="First name">
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          <input type="text" name="last_name" placeholder="Last name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Choose a username">
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" name="email" placeholder="your@email.com">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="password1" placeholder="Create a password">
+        </div>
+        <div class="form-group">
+          <label>Confirm password</label>
+          <input type="password" name="password2" placeholder="Confirm password">
+        </div>
+      </div>
+      <button type="button" class="btn btn--primary btn--block btn--lg mt-2">Create Account 🤘</button>
+      <p class="text-center text-muted mt-3" style="font-size:0.82rem;">
+        By joining you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.
+      </p>
+    </div>
+    <p class="text-center mt-3 text-muted">
+      Already have an account? <a href="login.html">Log in →</a>
+    </p>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+<script>
+function highlightCard(radio) {
+  document.querySelectorAll('.form-check').forEach(el => el.style.borderColor = 'var(--dark-4)');
+  radio.closest('.form-check').style.borderColor = 'var(--purple)';
+}
+</script>
+</body>
+</html>

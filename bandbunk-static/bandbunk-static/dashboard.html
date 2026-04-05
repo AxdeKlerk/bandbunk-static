@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — BandBunk</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+<div class="container section--sm">
+  <div class="flex-between mb-4" style="flex-wrap:wrap; gap:1rem;">
+    <div class="flex-gap">
+      <div class="avatar avatar--lg">A</div>
+      <div>
+        <h2 class="mb-0">Alex Riffington</h2>
+        <p class="text-muted mb-1">@alexriff</p>
+        <div class="flex-gap gap-sm">
+          <span class="badge badge--purple">Artist &amp; Host</span>
+          <span class="badge badge--green">✓ Verified Artist</span>
+          <span class="badge badge--grey">📍 Birmingham</span>
+        </div>
+      </div>
+    </div>
+    <a href="profile-edit.html" class="btn btn--outline btn--sm">Edit Profile</a>
+  </div>
+
+  <div class="flex-gap gap-sm mb-4" style="flex-wrap:wrap;">
+    <a href="#" class="btn btn--ghost btn--sm">📘 Facebook</a>
+    <a href="#" class="btn btn--ghost btn--sm">📸 Instagram</a>
+    <a href="#" class="btn btn--ghost btn--sm">🎵 Bandcamp</a>
+  </div>
+
+  <div class="grid grid-4 mb-6">
+    <div class="stat-card">
+      <span class="stat-card__value">2</span>
+      <span class="stat-card__label">Listings</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value">8</span>
+      <span class="stat-card__label">Stays Hosted</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value">14</span>
+      <span class="stat-card__label">Bookings Made</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value" style="color:var(--purple-bright);">4.9★</span>
+      <span class="stat-card__label">Artist Rating</span>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="gap:2.5rem; align-items:start;">
+    <div>
+      <div class="flex-between mb-3">
+        <h4>My Listings</h4>
+        <a href="create-listing.html" class="btn btn--primary btn--sm">+ New listing</a>
+      </div>
+      <div class="card mb-2" style="padding:1rem 1.25rem;">
+        <div class="flex-between">
+          <div>
+            <span style="font-size:1rem; margin-right:0.5rem;">🛋️</span>
+            <strong style="font-size:0.95rem;">Comfy sofa in Digbeth</strong>
+            <p class="text-muted" style="font-size:0.82rem; margin-top:0.2rem;">Birmingham · £10/night</p>
+          </div>
+          <div class="flex-gap gap-sm">
+            <span class="badge badge--green">Live</span>
+            <a href="create-listing.html" class="btn btn--ghost btn--sm">Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex-between mb-3">
+        <h4>Recent Bookings</h4>
+        <a href="my-bookings.html" class="btn btn--ghost btn--sm">View all →</a>
+      </div>
+      <div class="card mb-2" style="padding:1rem 1.25rem;">
+        <div class="flex-between">
+          <div>
+            <strong style="font-size:0.9rem;">Spare room near O2 Academy</strong>
+            <p class="text-muted" style="font-size:0.8rem; margin-top:0.2rem;">14 Apr → 15 Apr 2026</p>
+          </div>
+          <span class="badge badge--green">Confirmed</span>
+        </div>
+      </div>
+      <div class="card mb-2" style="padding:1rem 1.25rem;">
+        <div class="flex-between">
+          <div>
+            <strong style="font-size:0.9rem;">Floor space, Shoreditch flat</strong>
+            <p class="text-muted" style="font-size:0.8rem; margin-top:0.2rem;">22 Mar → 23 Mar 2026</p>
+          </div>
+          <span class="badge badge--purple">Done</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

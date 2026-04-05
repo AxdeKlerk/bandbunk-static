@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BandBunk — Where UK rock and metal bands crash after the gig. Fan-hosted beds, £10 a night.">
+  <title>BandBunk — Sleep After The Gig</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ──────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__noise"></div>
+      <div class="container hero__content">
+        <div class="hero__eyebrow">For UK Rock &amp; Metal Artists</div>
+        <h1 class="hero__title fade-up">
+          Sleep After<br>The <em>Gig.</em>
+        </h1>
+        <p class="hero__subtitle fade-up fade-up--delay-1">
+          Fans with spare sofas. Bands with nowhere to crash.
+          £10 a night gets you a bed, a brew, and a slice of toast.
+          No hotels. No van floor. Just the community looking after its own.
+        </p>
+        <div class="hero__cta fade-up fade-up--delay-2">
+          <a href="browse.html" class="btn btn--primary btn--lg">Find A Bunk 🛋️</a>
+          <a href="create-listing.html" class="btn btn--outline btn--lg">Host A Band</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS ─────────────────────────────────────────────── -->
+    <section class="section--sm" style="border-bottom:1px solid var(--dark-3);">
+      <div class="container">
+        <div class="grid grid-3" style="max-width:600px; margin:0 auto; text-align:center;">
+          <div>
+            <span style="font-family:var(--font-display); font-size:2.5rem; color:var(--purple-bright);">47</span>
+            <p class="label mt-1">Active Bunks</p>
+          </div>
+          <div>
+            <span style="font-family:var(--font-display); font-size:2.5rem; color:var(--purple-bright);">38</span>
+            <p class="label mt-1">Hosts</p>
+          </div>
+          <div>
+            <span style="font-family:var(--font-display); font-size:2.5rem; color:var(--purple-bright);">120</span>
+            <p class="label mt-1">Artists</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ──────────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="label">The deal</span>
+          <h2>How BandBunk Works</h2>
+        </div>
+        <div class="grid grid-3" style="gap:2rem;">
+
+          <div class="card card--hover p-4 text-center fade-up">
+            <div style="font-size:3rem; margin-bottom:1rem;">🎸</div>
+            <h4 class="mb-2">You Play the Gig</h4>
+            <p>You're a band or artist, away from home, skint, and the venue doesn't have a green room with bunk beds. Sound familiar?</p>
+          </div>
+
+          <div class="card card--hover p-4 text-center fade-up fade-up--delay-1">
+            <div style="font-size:3rem; margin-bottom:1rem;">🛋️</div>
+            <h4 class="mb-2">A Fan Has A Sofa</h4>
+            <p>A local fan who came to the show — or just loves the scene — has a spare room, sofa, or garage floor they're not using tonight.</p>
+          </div>
+
+          <div class="card card--hover p-4 text-center fade-up fade-up--delay-2">
+            <div style="font-size:3rem; margin-bottom:1rem;">☕</div>
+            <h4 class="mb-2">£10, A Brew &amp; Toast</h4>
+            <p>Ten pounds. That's it. In return you get somewhere safe to sleep, and at minimum a mug of tea and a slice of toast in the morning.</p>
+          </div>
+
+        </div>
+        <div class="text-center mt-4">
+          <a href="how-it-works.html" class="btn btn--outline">Full breakdown →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURED LISTINGS ──────────────────────────────────── -->
+    <section class="section" style="background:var(--dark-1); border-top:1px solid var(--dark-3); border-bottom:1px solid var(--dark-3);">
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <span class="label">Fresh bunks</span>
+            <h2>Latest Listings</h2>
+          </div>
+          <a href="browse.html" class="btn btn--ghost btn--sm">See all →</a>
+        </div>
+        <div class="grid grid-3">
+
+          <a href="listing-detail.html" class="card card--hover listing-card">
+            <div class="listing-card__image-wrap">
+              <div class="listing-card__no-image">🛋️</div>
+              <span class="listing-card__type-badge">Sofa</span>
+            </div>
+            <div class="card__body">
+              <h5 class="mb-1">Comfy sofa in Digbeth</h5>
+              <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Birmingham</p>
+              <div class="flex-between">
+                <span style="font-family:var(--font-display); font-size:1.4rem; color:var(--white);">
+                  £10<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span>
+                </span>
+                <span style="font-size:0.85rem; color:var(--purple-glow);">★ 4.9</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="listing-detail.html" class="card card--hover listing-card">
+            <div class="listing-card__image-wrap">
+              <div class="listing-card__no-image">🚪</div>
+              <span class="listing-card__type-badge">Spare Room</span>
+            </div>
+            <div class="card__body">
+              <h5 class="mb-1">Spare room near O2 Academy</h5>
+              <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Leeds</p>
+              <div class="flex-between">
+                <span style="font-family:var(--font-display); font-size:1.4rem; color:var(--white);">
+                  £15<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span>
+                </span>
+                <span style="font-size:0.85rem; color:var(--purple-glow);">★ 5.0</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="listing-detail.html" class="card card--hover listing-card">
+            <div class="listing-card__image-wrap">
+              <div class="listing-card__no-image">🎸</div>
+              <span class="listing-card__type-badge">Garage / Rehearsal</span>
+            </div>
+            <div class="card__body">
+              <h5 class="mb-1">Garage with rehearsal kit, city centre</h5>
+              <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Manchester</p>
+              <div class="flex-between">
+                <span style="font-family:var(--font-display); font-size:1.4rem; color:var(--white);">
+                  £20<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span>
+                </span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TRUST / COMMUNITY ───────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap:4rem; align-items:center;">
+          <div>
+            <span class="label">Built on trust</span>
+            <h2 class="mt-2">Both Ways.</h2>
+            <p class="mt-3">
+              Artists prove they're real — by linking their social profiles and supplying the venue they're playing.
+              Hosts know exactly who's knocking on their door.
+            </p>
+            <p>
+              After every stay, both sides rate the experience. Leave the place a tip? Zero stars and a public comment.
+              Hosts that are rude or sketchy? Same deal. The community polices itself.
+            </p>
+            <div class="flex-gap mt-4" style="flex-wrap:wrap;">
+              <div class="badge badge--purple">★ Two-way reviews</div>
+              <div class="badge badge--purple">✓ Gig verification</div>
+              <div class="badge badge--purple">🔗 Social proof</div>
+            </div>
+          </div>
+          <div style="background:var(--dark-1); border:1px solid var(--purple-border); border-radius:var(--radius-lg); padding:2rem;">
+            <h5 class="mb-3">What's included in every stay</h5>
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+              <div class="amenity amenity--active">☕ Tea or coffee minimum</div>
+              <div class="amenity amenity--active">🍞 Toast as a minimum breakfast</div>
+              <div class="amenity amenity--active">🛏️ Safe, warm sleeping space</div>
+              <div class="amenity amenity--active">📍 Location verified against gig venue</div>
+              <div class="amenity amenity--active">💳 Secure £10 payment on confirmation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BAND ────────────────────────────────────────────── -->
+    <section class="section--sm" style="background:var(--dark-1); border-top:1px solid var(--dark-3);">
+      <div class="container text-center">
+        <h2 class="mb-3">Ready to <em style="font-style:normal; color:var(--purple-bright);">sleep</em> after the gig?</h2>
+        <p class="mb-4" style="max-width:480px; margin-left:auto; margin-right:auto;">
+          Join the growing community of fans and bands keeping UK rock and metal on the road.
+        </p>
+        <div class="flex-center" style="gap:1rem; flex-wrap:wrap;">
+          <a href="register.html" class="btn btn--primary btn--lg">Join Free</a>
+          <a href="map.html" class="btn btn--ghost btn--lg">View the Map</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Bunk — BandBunk</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+<div class="container section--sm">
+  <div class="container--narrow" style="margin:0 auto;">
+    <a href="listing-detail.html" class="text-muted" style="font-size:0.85rem;">← Back to listing</a>
+    <h1 class="mt-3 mb-1">Request This Bunk</h1>
+    <p class="text-muted mb-4">Comfy sofa in Digbeth · Birmingham · £10/night</p>
+    <div class="card p-4">
+      <h5 class="mb-3">Your Dates</h5>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="check-in">Check-in date</label>
+          <input type="date" id="check-in" name="check_in" onchange="updatePrice()">
+        </div>
+        <div class="form-group">
+          <label for="check-out">Check-out date</label>
+          <input type="date" id="check-out" name="check_out" onchange="updatePrice()">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="num-guests">Number of people sleeping</label>
+        <input type="number" id="num-guests" name="num_guests" min="1" max="2" value="1">
+        <p class="form-help">Max 2 guests</p>
+      </div>
+      <hr class="divider">
+      <h5 class="mb-3">Your Gig Details</h5>
+      <p class="text-muted mb-3" style="font-size:0.85rem;">Your host needs to know you're genuinely playing a gig nearby. This is how we keep BandBunk real.</p>
+      <div class="form-group">
+        <label>Band / artist name</label>
+        <input type="text" name="band_name" placeholder="Your band name">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Gig date</label>
+          <input type="date" name="gig_date">
+        </div>
+        <div class="form-group">
+          <label>Venue name</label>
+          <input type="text" name="venue_name" placeholder="The venue you're playing">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Venue address</label>
+        <input type="text" name="venue_address" placeholder="Full venue address">
+      </div>
+      <div class="form-group">
+        <label>Event link</label>
+        <input type="url" name="social_proof_url" placeholder="Facebook event, Eventbrite, Songkick, Instagram post...">
+        <p class="form-help">Anything that shows you're really playing.</p>
+      </div>
+      <hr class="divider">
+      <h5 class="mb-3">Message to Host</h5>
+      <div class="form-group">
+        <label>Anything else the host should know? (optional)</label>
+        <textarea name="message_to_host" rows="3" placeholder="How many in the band, any gear you're bringing, anything useful..."></textarea>
+      </div>
+      <div id="price-preview" style="background:var(--dark-2); border:1px solid var(--purple-border); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.5rem; display:none;">
+        <div class="flex-between">
+          <span class="text-muted">£10 × <span id="nights-count">—</span> nights</span>
+          <span style="font-family:var(--font-display); font-size:1.5rem;" id="total-price">—</span>
+        </div>
+        <p class="text-muted mt-1" style="font-size:0.78rem;">Payment is taken when the host confirms your booking.</p>
+      </div>
+      <button type="button" class="btn btn--primary btn--block btn--lg">Send Booking Request 🎸</button>
+      <p class="text-center text-muted mt-2" style="font-size:0.78rem;">The host will review your request and confirm or decline within 48 hours.</p>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+<script>
+function updatePrice() {
+  const ci = document.getElementById('check-in');
+  const co = document.getElementById('check-out');
+  const preview = document.getElementById('price-preview');
+  if (ci.value && co.value) {
+    const nights = Math.round((new Date(co.value) - new Date(ci.value)) / 86400000);
+    if (nights > 0) {
+      document.getElementById('nights-count').textContent = nights;
+      document.getElementById('total-price').textContent = '£' + (nights * 10).toFixed(2);
+      preview.style.display = 'block';
+    } else { preview.style.display = 'none'; }
+  }
+}
+</script>
+</body>
+</html>

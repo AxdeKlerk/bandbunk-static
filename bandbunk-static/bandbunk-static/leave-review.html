@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave a Review — BandBunk</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+<div class="container section--sm">
+  <div class="container--narrow" style="margin:0 auto;">
+    <a href="my-bookings.html" class="text-muted" style="font-size:0.85rem;">← Back to bookings</a>
+    <h1 class="mt-3 mb-1">Review Your Host</h1>
+    <p class="text-muted mb-4">How was your stay with <strong>shoreditch_punk</strong>? Be honest — the community depends on it.</p>
+    <div class="card p-4">
+      <div class="form-group mb-4">
+        <label>Overall rating</label>
+        <div class="star-rating-input mt-2">
+          <input type="radio" name="overall_rating" id="overall_5" value="5"><label for="overall_5">★</label>
+          <input type="radio" name="overall_rating" id="overall_4" value="4"><label for="overall_4">★</label>
+          <input type="radio" name="overall_rating" id="overall_3" value="3"><label for="overall_3">★</label>
+          <input type="radio" name="overall_rating" id="overall_2" value="2"><label for="overall_2">★</label>
+          <input type="radio" name="overall_rating" id="overall_1" value="1"><label for="overall_1">★</label>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="grid grid-3 mb-4">
+        <div class="form-group">
+          <label>🧹 Cleanliness</label>
+          <div class="star-rating-input mt-1" style="font-size:1.2rem;">
+            <input type="radio" name="cleanliness_rating" id="clean_5" value="5"><label for="clean_5" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="cleanliness_rating" id="clean_4" value="4"><label for="clean_4" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="cleanliness_rating" id="clean_3" value="3"><label for="clean_3" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="cleanliness_rating" id="clean_2" value="2"><label for="clean_2" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="cleanliness_rating" id="clean_1" value="1"><label for="clean_1" style="font-size:1.2rem;">★</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>🔇 Noise / Respect</label>
+          <div class="star-rating-input mt-1" style="font-size:1.2rem;">
+            <input type="radio" name="noise_rating" id="noise_5" value="5"><label for="noise_5" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="noise_rating" id="noise_4" value="4"><label for="noise_4" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="noise_rating" id="noise_3" value="3"><label for="noise_3" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="noise_rating" id="noise_2" value="2"><label for="noise_2" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="noise_rating" id="noise_1" value="1"><label for="noise_1" style="font-size:1.2rem;">★</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>🤝 Hospitality</label>
+          <div class="star-rating-input mt-1" style="font-size:1.2rem;">
+            <input type="radio" name="hospitality_rating" id="hosp_5" value="5"><label for="hosp_5" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="hospitality_rating" id="hosp_4" value="4"><label for="hosp_4" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="hospitality_rating" id="hosp_3" value="3"><label for="hosp_3" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="hospitality_rating" id="hosp_2" value="2"><label for="hosp_2" style="font-size:1.2rem;">★</label>
+            <input type="radio" name="hospitality_rating" id="hosp_1" value="1"><label for="hosp_1" style="font-size:1.2rem;">★</label>
+          </div>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="form-group mb-4">
+        <label>Your review</label>
+        <textarea name="body" rows="5" placeholder="Tell the community what it was really like..."></textarea>
+      </div>
+      <div class="flex-gap">
+        <button type="button" class="btn btn--primary btn--lg">Submit Review 🤘</button>
+        <a href="my-bookings.html" class="btn btn--ghost">Skip for now</a>
+      </div>
+      <p class="text-muted mt-3" style="font-size:0.78rem;">Reviews are public and cannot be edited once submitted. Keep it honest, keep it fair.</p>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

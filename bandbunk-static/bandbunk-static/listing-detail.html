@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comfy sofa in Digbeth — BandBunk</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+<div class="container section--sm">
+  <p class="text-muted mb-3" style="font-size:0.85rem;">
+    <a href="browse.html">Find A Bunk</a> /
+    <a href="browse.html">Norwich</a> /
+    Comfy sofa in Norwich
+  </p>
+
+  <div class="layout-sidebar">
+
+    <div>
+      <div style="border-radius:var(--radius-lg); overflow:hidden; margin-bottom:2rem; background:var(--dark-2); aspect-ratio:16/9; display:flex; align-items:center; justify-content:center;">
+        <span style="font-size:6rem;">
+          <img src="images/sofa.jpg" alt="Sofa" style="width:100%; height:100%; object-fit:cover;">
+        </span>
+      </div>
+
+      <div class="flex-between mb-1">
+        <h1 style="font-size:2.5rem;">Comfy sofa in Norwich</h1>
+        <span class="badge badge--purple">Sofa</span>
+      </div>
+      <p class="text-muted mb-3">📍 Norwich, NR2 2PA</p>
+
+      <div class="flex-gap mb-3">
+        <span style="color:var(--purple-bright);">★ 4.9</span>
+        <span class="text-muted">7 reviews</span>
+      </div>
+
+      <hr class="divider">
+
+      <div class="flex-gap mb-4">
+        <div class="avatar avatar--md">M</div>
+        <div>
+          <p class="mb-0"><strong>Hosted by <a href="#">metalfan_norwich</a></strong></p>
+          <p class="text-muted" style="font-size:0.82rem;">Member since January 2025</p>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <h4 class="mb-2">About this bunk</h4>
+      <p>Comfortable sofa in a living room two minutes from Norwich High Street. Easy walk to most of the venues in the area. I'm a massive metal fan — been going to gigs since the early 2000s. Happy for bands to crash here. Leave the place how you found it and we're sound.</p>
+
+      <hr class="divider">
+
+      <h4 class="mb-3">What's included</h4>
+      <div class="amenities">
+        <span class="amenity amenity--active">☕ Tea/coffee &amp; toast</span>
+        <span class="amenity amenity--active">📶 WiFi</span>
+        <span class="amenity amenity--active">🚿 Shower</span>
+      </div>
+
+      <hr class="divider">
+      <h4 class="mb-2">House rules</h4>
+      <p>Back by 2am please — I'm up for work at 6. Treat the sofa kindly. No smoking inside.</p>
+      <p class="mt-2"><span class="badge badge--amber">🔇 Noise curfew: 23:00</span></p>
+
+      <hr class="divider">
+
+      <h4 class="mb-3">Reviews <span class="badge badge--purple ml-2">7</span></h4>
+
+      <div class="review-card mb-3">
+        <div class="review-card__header">
+          <div class="avatar avatar--sm">S</div>
+          <div>
+            <strong style="font-size:0.9rem;">StoneDeadBand</strong>
+            <div class="review-card__meta">March 2026</div>
+          </div>
+          <span style="margin-left:auto; color:var(--purple-bright);">★★★★★</span>
+        </div>
+        <p style="font-size:0.9rem;">Absolute legend of a host. Sofa was comfy, kettle was on before we'd even got our gear in. Would 100% crash here again on the next Birmingham run.</p>
+        <div class="flex-gap gap-sm mt-2" style="flex-wrap:wrap;">
+          <span class="badge badge--grey">🧹 Cleanliness: 5/5</span>
+          <span class="badge badge--grey">🤝 Hospitality: 5/5</span>
+        </div>
+      </div>
+
+      <div class="review-card mb-3">
+        <div class="review-card__header">
+          <div class="avatar avatar--sm">R</div>
+          <div>
+            <strong style="font-size:0.9rem;">Riot Siren</strong>
+            <div class="review-card__meta">February 2026</div>
+          </div>
+          <span style="margin-left:auto; color:var(--purple-bright);">★★★★★</span>
+        </div>
+        <p style="font-size:0.9rem;">Sorted us out last minute after the venue moved. Genuinely saved our tour. Top lad.</p>
+      </div>
+
+    </div>
+
+    <!-- BOOKING SIDEBAR -->
+    <div class="sidebar-sticky">
+      <div class="booking-widget">
+        <div class="booking-widget__price">
+          £10 <span>/ night</span>
+        </div>
+
+        <p class="text-muted mb-3" style="font-size:0.85rem;">Up to 2 guests · Max 3 nights</p>
+
+        <a href="login.html" class="btn btn--primary btn--block btn--lg">Log in to Book</a>
+        <p class="text-muted mt-2" style="font-size:0.78rem; text-align:center;">Don't have an account? <a href="register.html">Join free</a></p>
+
+        <hr class="divider">
+
+        <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.85rem;">
+          <div class="flex-between">
+            <span class="text-muted">Type</span>
+            <span>🛋️ Sofa</span>
+          </div>
+          <div class="flex-between">
+            <span class="text-muted">Breakfast</span>
+            <span>✓ Included</span>
+          </div>
+          <div class="flex-between">
+            <span class="text-muted">Max guests</span>
+            <span>2</span>
+          </div>
+          <div class="flex-between">
+            <span class="text-muted">Max stay</span>
+            <span>3 nights</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center mt-3" style="font-size:0.78rem;">
+        <a href="contact.html" class="text-muted">🚩 Report this listing</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

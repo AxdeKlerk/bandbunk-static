@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find A Bunk — BandBunk</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">Band<span>Bunk</span></a>
+    <ul class="navbar__nav" id="main-nav">
+      <li><a href="browse.html" class="active">Find A Bunk</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a href="login.html" class="btn btn--ghost btn--sm">Log in</a>
+      <a href="register.html" class="btn btn--primary btn--sm">Join Free</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
+
+<div class="container section--sm">
+  <div class="page-header">
+    <h1 class="mb-3">Find A Bunk</h1>
+    <form class="search-bar" style="max-width:720px;" onsubmit="return false;">
+      <input type="text" name="q" placeholder="Town, city or postcode...">
+      <select name="type">
+        <option value="">All types</option>
+        <option value="sofa">Sofa</option>
+        <option value="spare_room">Spare Room</option>
+        <option value="floor_space">Floor Space</option>
+        <option value="garage">Garage / Rehearsal</option>
+      </select>
+      <input type="number" name="max_price" placeholder="Max £/night" style="border:none; border-left:1px solid var(--dark-4); background:var(--dark-2); width:120px; border-radius:0;">
+      <button type="submit" class="btn btn--primary">Search</button>
+    </form>
+  </div>
+
+  <div class="flex-between mb-4">
+    <p class="text-muted">6 bunks available</p>
+    <a href="map.html" class="btn btn--ghost btn--sm">🗺️ Map view</a>
+  </div>
+
+  <div class="grid grid-3">
+
+    <a href="listing-detail.html" class="card card--hover listing-card">
+      <div class="listing-card__image-wrap">
+        <div class="listing-card__no-image">
+          <span>
+              <img src="images/sofa.jpg" alt="Sofa" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-sm);">
+          </span>
+        </div>
+        <span class="listing-card__type-badge">Sofa</span>
+      </div>
+      <div class="card__body">
+        <h5 class="mb-1">Comfy sofa in Norwich</h5>
+        <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Norwich, NR2 2PA</p>
+        <div class="amenities mb-2">
+          <span class="amenity amenity--active">☕ Breakfast</span>
+          <span class="amenity">📶 WiFi</span>
+          <span class="amenity amenity--active">🚿 Shower</span>
+        </div>
+        <div class="flex-between">
+          <span style="font-family:var(--font-display); font-size:1.4rem;">£10<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span></span>
+          <span class="badge badge--purple">★ 4.9 (7)</span>
+        </div>
+      </div>
+      <div class="card__footer">
+        <span class="text-muted" style="font-size:0.8rem;">Hosted by</span>
+        <span style="font-size:0.85rem; color:var(--grey-1);">metalfan_norwich</span>
+      </div>
+    </a>
+
+    <a href="#" class="card card--hover listing-card">
+      <div class="listing-card__image-wrap">
+        <div class="listing-card__no-image">
+          <span>
+            <img src="images/spare_room.jpg" alt="Spare Room" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-sm);">
+          </span>
+        </div>
+        <span class="listing-card__type-badge">Spare Room</span>
+      </div>
+      <div class="card__body">
+        <h5 class="mb-1">Spare room near Brickmakers</h5>
+        <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Norwich, NR3 4DY</p>
+        <div class="amenities mb-2">
+          <span class="amenity amenity--active">☕ Breakfast</span>
+          <span class="amenity amenity--active">📶 WiFi</span>
+          <span class="amenity amenity--active">🚗 Parking</span>
+        </div>
+        <div class="flex-between">
+          <span style="font-family:var(--font-display); font-size:1.4rem;">£15<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span></span>
+          <span class="badge badge--purple">★ 5.0 (12)</span>
+        </div>
+      </div>
+      <div class="card__footer">
+        <span class="text-muted" style="font-size:0.8rem;">Hosted by</span>
+        <span style="font-size:0.85rem; color:var(--grey-1);">riff_lord_lou</span>
+      </div>
+    </a>
+
+    <a href="#" class="card card--hover listing-card">
+      <div class="listing-card__image-wrap">
+        <div class="listing-card__no-image">
+          <span>
+            <img src="images/garage.jpg" alt="Garage" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-sm);">
+          </span>
+        </div>
+        <span class="listing-card__type-badge">Garage / Rehearsal</span>
+      </div>
+      <div class="card__body">
+        <h5 class="mb-1">Garage without rehearsal kit</h5>
+        <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Norwich, NR3 1JD</p>
+        <div class="amenities mb-2">
+          <span class="amenity amenity--active">🎸 Instruments OK</span>
+          <span class="amenity amenity--active">🚗 Parking</span>
+        </div>
+        <div class="flex-between">
+          <span style="font-family:var(--font-display); font-size:1.4rem;">£20<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span></span>
+          <span class="badge badge--grey">No reviews yet</span>
+        </div>
+      </div>
+      <div class="card__footer">
+        <span class="text-muted" style="font-size:0.8rem;">Hosted by</span>
+        <span style="font-size:0.85rem; color:var(--grey-1);">norwichmetal</span>
+      </div>
+    </a>
+
+    <a href="#" class="card card--hover listing-card">
+      <div class="listing-card__image-wrap">
+        <div class="listing-card__no-image">
+          <span>
+            <img src="images/floor_space.jpg" alt="Floor Space" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-sm);">
+          </span>
+        </div>
+        <span class="listing-card__type-badge">Floor Space</span>
+      </div>
+      <div class="card__body">
+        <h5 class="mb-1">Floor space, Norwich flat</h5>
+        <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Norwich, NR1 3JU</p>
+        <div class="amenities mb-2">
+          <span class="amenity amenity--active">☕ Breakfast</span>
+          <span class="amenity amenity--active">🚗 Parking</span>
+        </div>
+        <div class="flex-between">
+          <span style="font-family:var(--font-display); font-size:1.4rem;">£10<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span></span>
+          <span class="badge badge--purple">★ 4.7 (3)</span>
+        </div>
+      </div>
+      <div class="card__footer">
+        <span class="text-muted" style="font-size:0.8rem;">Hosted by</span>
+        <span style="font-size:0.85rem; color:var(--grey-1);">norwich_punk</span>
+      </div>
+    </a>
+
+    <a href="#" class="card card--hover listing-card">
+      <div class="listing-card__image-wrap">
+        <div class="listing-card__no-image">
+          <span>
+            <img src="images/pullout_sofa.jpg" alt="Pull-out Sofa" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-sm);">
+          </span>
+        </div>
+        <span class="listing-card__type-badge">Sofa</span>
+      </div>
+      <div class="card__body">
+        <h5 class="mb-1">Pull-out sofa, city centre</h5>
+        <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Norwich, NR6 7QZ</p>
+        <div class="amenities mb-2">
+          <span class="amenity amenity--active">☕ Breakfast</span>
+          <span class="amenity amenity--active">📶 WiFi</span>
+          <span class="amenity amenity--active">🚗 Parking</span>
+        </div>
+        <div class="flex-between">
+          <span style="font-family:var(--font-display); font-size:1.4rem;">£12<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span></span>
+          <span class="badge badge--purple">★ 4.8 (5)</span>
+        </div>
+      </div>
+      <div class="card__footer">
+        <span class="text-muted" style="font-size:0.8rem;">Hosted by</span>
+        <span style="font-size:0.85rem; color:var(--grey-1);">norwichgigs</span>
+      </div>
+    </a>
+
+    <a href="#" class="card card--hover listing-card">
+      <div class="listing-card__image-wrap">
+        <div class="listing-card__no-image">
+          <span>
+            <img src="images/room.jpg" alt="Spare Room" style="width:100%; height:200px; object-fit:cover; border-radius:var(--radius-sm);">
+          </span>
+        </div>
+        <span class="listing-card__type-badge">Spare Room</span>
+      </div>
+      <div class="card__body">
+        <h5 class="mb-1">Double room, quiet street</h5>
+        <p class="text-muted" style="font-size:0.85rem; margin-bottom:0.75rem;">Norwich, NR4 7AZ</p>
+        <div class="amenities mb-2">
+          <span class="amenity amenity--active">☕ Breakfast</span>
+          <span class="amenity amenity--active">🚿 Shower</span>
+        </div>
+        <div class="flex-between">
+          <span style="font-family:var(--font-display); font-size:1.4rem;">£18<span style="font-family:var(--font-body); font-size:0.8rem; color:var(--grey-2);">/night</span></span>
+          <span class="badge badge--purple">★ 4.6 (9)</span>
+        </div>
+      </div>
+      <div class="card__footer">
+        <span class="text-muted" style="font-size:0.8rem;">Hosted by</span>
+        <span style="font-size:0.85rem; color:var(--grey-1);">norwichheavy</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem;">
+        <div>
+          <div class="footer__logo">Band<span>Bunk</span></div>
+          <p class="footer__tagline">Sleep after the gig.<br>No hotel. No van floor.<br>Just a fan with a sofa.</p>
+        </div>
+        <div>
+          <h6 class="mb-2">For Artists</h6>
+          <ul class="footer__links">
+            <li><a href="browse.html">Find a Bunk</a></li>
+            <li><a href="map.html">Map View</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">For Fans / Hosts</h6>
+          <ul class="footer__links">
+            <li><a href="create-listing.html">Post a Listing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mb-2">BandBunk</h6>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 BandBunk. Built for the road. 🤘</span>
+        <div class="flex-gap gap-sm">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
